@@ -1,0 +1,353 @@
+
+University
+Home
+Search
+⌘E
+LEARN
+Courses
+Docs
+Interactive learning
+Glossary
+Certifications
+ENGAGE
+Support
+↗
+Community
+↗
+Events
+↗
+Forum
+↗
+BUILD
+New site
+↗
+Project Dashboard
+↗
+Try Webflow — it's free
+All docs
+Site settings
+Custom code in head and body tags
+Add custom code and scripts that apply to your entire site or individual pages.
+We’re transitioning to a new UI, and are in the process of updating our Webflow University content.
+If you have a Core, Growth, Agency, or Freelancer Workspace, or if your site has an active Site plan, you can add custom code and scripts that apply to your entire site or individual pages. This can be useful for adding additional HTML, CSS, and JavaScript. 
+
+You can also use the Embed element to add custom blocks of HTML code to your site design or rich text elements.
+
+In this lesson:
+
+Supported code
+Custom code in Site settings
+Custom code in Page settings
+FAQ and troubleshooting tips
+Important
+
+Custom code is an advanced modification that may conflict with Webflow’s underlying functionality. As such, Webflow cannot guarantee the functionality or full compatibility of any custom code. Additionally, our support team is unable to provide direct help with custom code setup or troubleshooting, as these topics fall outside the scope of our customer support policy. If you run into issues with custom code, please let us know on the Webflow Forum, where the entire Webflow community (staff included) can provide additional help and resources.
+
+Supported code
+The custom code sections in Site and Page settings only support HTML, CSS, and JS. You can’t integrate server-side languages (such as Perl, PHP, Python, or Ruby) in any code section. 
+
+Need to know
+
+The Head code and Footer code sections in Site settings can accommodate up to 20,000 characters each, and custom code in the <head> tag and before the </body> tag in Page settings can accommodate up to 10,000 characters each. If the code you want to add to your site is longer, you can store it on another server and reference the script in your custom code. You can also minify your custom code using a third-party tool.
+
+Tags
+Important
+
+If your custom code has opening and/or closing tags, make sure to add those to ensure your code works as expected. Additionally, don’t include <html>, <body>, or <head> tags in your custom code, or your website/layout will break.
+
+Link tag: <link> 
+The <link> tag defines a link between a document and an external resource and should always go in the <head> code section. 
+
+Meta tag: <meta> 
+The <meta> tag provides metadata about your site and should always go in the <head> code section. 
+
+Style tags: <style></style>
+The <style></style> tag defines additional CSS styles in your site and should always go in the <head> code section. 
+
+Script tags: <script></script>
+The <script></script> tag allows you to embed JavaScript in your site and can be added to either the <head> code section or before the closing </body> tag (i.e., the Footer code section). However, adding your <script></script> tags just before the closing </body> tag ensures your site pages load all their content before the JavaScript is processed, which helps with page load speed and provides a better user experience. 
+
+Important
+
+As of August 2020, newly published Webflow sites include jQuery v3.5.1. Importing other versions of jQuery with custom code may cause conflicts and unexpected behavior on your site. 
+
+Custom code in Site settings
+Head code
+Custom code entered in the Head code section appears before the closing </head> tag in your site’s HTML markup and applies to your entire site. The Head code section allows you to link external resources, add metadata, and use custom styles. 
+
+Good to know
+
+Adding external <script> tags to the <head> of your site can slow page loads. Consider adding the “async” or “defer” attribute in the <script> tag to improve performance.
+
+To add custom code to the Head tag: 
+
+Visit Site settings > Custom code tab
+Add your custom code in the Head code section
+Click Save changes
+Footer code
+Code entered in the Footer code section appears before the closing </body> tag in your site’s HTML markup and applies to your entire site. 
+
+To add custom code to the Head tag: 
+
+Visit your Site settings > Custom code tab
+Add your custom code in the Footer code section
+Click Save changes
+Important
+
+Custom scripts will only appear on the published site. 
+
+Custom code in Page settings
+The code included in the custom code section of any page will only apply to that page, and will appear after any site-wide custom code in your site’s HTML markup. 
+
+In the <head> tag
+<link>, <meta>, and <style></style> tags should always go inside the <head> tag. <script></script> tags can also be added inside the <head> tag, but adding scripts before the closing </body> tag typically improves site performance and provides a better experience for your site visitors. 
+
+Note
+
+Good to know: Adding external <script> tags to the <head> of your site can slow page loads. Consider adding the “async” or “defer” attribute in the <script> tag to improve performance.
+
+To add custom code inside the <head> tag of an individual page: 
+
+Open your site in the Designer
+Open Page settings for the page where you’d like to add your code
+Add your custom code to the Inside <head> tag section under Custom code 
+Save your changes
+The “Inside <head> tag” section highlighted in page-level custom code settings in the Webflow Designer.
+Before the </body> tag
+Generally, <script></script> tags should go in this section. 
+
+To add custom code before the closing </body> tag of an individual page: 
+
+Open your site in the Designer
+Open Page settings for the page where you’d like to add your code
+Add your custom code to the Before </body> tag section under Custom code
+Save your changes
+The “Before </body> tag” section highlighted in page-level custom code settings in the Designer.
+Important
+
+Custom scripts will only appear on the published site.
+
+FAQ and troubleshooting tips
+Can I use server-side languages in my site or page-level custom code? 
+You can’t integrate server-side languages (e.g., Perl, PHP, Python, Ruby) using custom code. Custom code in Site and Page settings only supports HTML, CSS in <style> tags, and JS in <script> tags.
+
+Can I increase the character limit for custom code? 
+The Head code and Footer code sections in Site settings can accommodate up to 20,000 characters each, and custom code in the <head> tag and before the </body> tag in Page settings can accommodate up to 10,000 characters each. If the code you want to add to your site is longer, you can store it on another server and reference the script in your custom code. You can also minify your custom code using a third-party tool.
+
+Why isn’t my custom code taking effect in the Designer? 
+Custom scripts will only appear on the published site. These are disabled in the Designer to prevent any unexpected behavior.
+
+Help! My custom code isn’t working! 
+Double-check that your code includes the appropriate opening and/or closing tags and doesn’t include <html>, <body>, or <head> tags. 
+
+As of August 2020, newly published Webflow sites include jQuery v3.5.1. Importing other versions of jQuery with custom code may cause conflicts and unexpected behavior on your site. Scripts that affect DOM events like onClick, onHover, etc. may also cause unexpected behavior.
+
+It’s important to keep in mind that custom code is an advanced modification that may conflict with Webflow’s underlying functionality. As such, Webflow cannot guarantee the functionality or full compatibility of any custom code.
+
+Our support team is unable to provide direct help with custom code setup or troubleshooting, as these topics fall outside the scope of our customer support policy. If you run into issues with custom code, please let us know on the Webflow Forum, where the entire Webflow community (staff included) can provide additional help and resources.
+
+Table of contents
+Custom code in head and body tags
+Supported code
+Custom code in Site settings
+Custom code in Page settings
+FAQ and troubleshooting tips
+Continue learning
+Search
+Archive a site
+Site settings
+Duplicate a site
+Site settings
+Set a global canonical tag to improve SEO
+SEO
+Transfer a site
+Site settings
+Manually connect a custom domain
+Hosting & code export
+Manually connect a custom subdomain
+Hosting & code export
+Quick connect a custom domain
+Hosting & code export
+Creator Credits
+Site settings
+Webflow staging subdomain
+Site settings
+Upload custom fonts
+Site settings
+Custom security headers
+Site settings
+Editor branding
+Site settings
+Invite content editors
+Site settings
+Publishing overview
+Getting started
+Share your site and invite collaborators
+Collaboration
+Pages panel overview
+Site settings
+Password protect your site or web pages
+Site settings
+Save and restore backups
+Site settings
+Advanced publishing options
+Site settings
+Webflow branding
+Site settings
+Custom code in head and body tags
+Site settings
+Duplicate, transfer, or archive a site
+Site settings
+Page URLs
+Site settings
+404 error page
+Site settings
+Add SEO title and meta description
+SEO
+Add Google Fonts
+Site settings
+Assign a new homepage
+Site settings
+Collect form submissions on exported sites
+Site settings
+Control the look of social shares with Open Graph
+Site settings
+Create a sitemap in Webflow
+Site settings
+Disable search engine indexing
+Site settings
+Drafted pages
+Site settings
+Favicons and touch icons
+Site settings
+Href prefix
+Site settings
+Organize your site with page folders
+Site settings
+Remove content from Google's index
+Site settings
+Set your site’s language code
+Site settings
+Set your time zone in Webflow
+Site settings
+Showcase your site on Made in Webflow
+Site settings
+Filter
+Reset
+
+Popular
+
+Micro lesson
+
+Includes video
+TOPICS
+
+Getting started
+
+Accounts & Workspaces
+
+Billing & subscriptions
+
+Elements
+
+Layout & design
+
+Interactions & animations
+
+CMS & dynamic content
+
+Hosting & code export
+
+Ecommerce & User Accounts
+
+Accessibility
+
+SEO
+
+Logic
+
+Templates
+
+Site settings
+
+Integrations
+
+Collaboration
+
+Localization
+
+Apps
+
+Security
+Back to top
+© 2024 Webflow, Inc.
+All rights reserved
+PRODUCT
+Platform
+Designer
+CMS
+Ecommerce
+Interactions
+Localization
+SEO
+Editor
+Hosting
+DevLink
+LABS
+Figma to Webflow
+LABS
+Security
+Accessibility
+Feature index
+COMPARE
+Webflow vs WordPress
+Webflow vs Squarespace
+Webflow vs Shopify
+Webflow vs Contentful
+Webflow vs Sitecore
+COMPANY
+About
+Careers
+WE'RE HIRING
+Press
+Webflow Shop
+Accessibility statement
+Terms of Service
+Privacy policy
+Cookie policy
+Cookie preferences
+Sitemap
+SOLUTIONS
+Freelancers
+Agencies
+Enterprise
+Startups
+Classrooms
+Global alliances
+EXPLORE
+Marketplace
+Libraries
+BETA
+Apps
+Hire an Expert
+Templates
+Made in Webflow
+LEARN
+University
+Blog
+Customers
+Resources
+Community
+Developers
+Glossary
+SOCIAL
+Become a Partner
+Become an Expert
+Become a Template Designer
+Become an Affiliate
+GET HELP
+Support
+Pricing
+Status
+Forum
+Wishlist
